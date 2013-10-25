@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="map"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
+   
+  <!-- launch AMCL -->
+  <include file="$(find rocs_test)/config/move_base_config/amcl_node.launch"/> 
+ 
+  <!-- launch move base -->    
+  <include file="$(find rocs_test)/config/move_base_config/move_base.launch"/>
+  
+</launch>

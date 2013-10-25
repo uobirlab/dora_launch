@@ -2,17 +2,11 @@
 import rospy
 from p2os_driver.msg import MotorState
 
-
-def enable_motors():
     
-    pub = rospy.Publisher('/cmd_motor_state', MotorState, latch=True)
-    rospy.init_node('enable_motors')
-    pub.publish(MotorState(4))
+pub = rospy.Publisher('/cmd_motor_state', MotorState)
+rospy.init_node('enable_motors')
+r = rospy.Rate(2) # hz
+while not rospy.is_shutdown():
+   pub.publish(MotorState(4))
+   r.sleep()
 
-
-if __name__ == '__main__':
-    try:
-        rospy.sleep(10)
-        enable_motors()
-    except rospy.ROSInterruptException:
-        pass
