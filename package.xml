@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>dora-launch</name>
+  <name>dora_launch</name>
   <version>0.0.0</version>
-  <description>The dora-launch package</description>
+  <description>The dora_launch package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
@@ -19,7 +19,7 @@
   <!-- Url tags are optional, but mutiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <!-- <url type="website">http://ros.org/wiki/dora-launch</url> -->
+  <!-- <url type="website">http://ros.org/wiki/dora_launch</url> -->
 
 
   <!-- Author tags are optional, mutiple are allowed, one per tag -->

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+	<node pkg="p2os_driver" name="p2os_driver" type="p2os_driver"> 
+	      <param name="port" type="string" value="/dev/ttyUSB0"/>
+	</node>
+
+	<include file="$(find rocs_robot)/launch/ptu.launch" />
+
+<!-- publish the static transform from the center of the robot to the laser rangefinder (required for slam_gmapping) --> 
+	<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.224 0 0.125 0 0 0 base_link laser 100" />
+
+
+<!-- publish the static transform from the center of the robot to the kinect (required for rgdbslam)  -->
+	<node pkg="tf" type="static_transform_publisher" name="odom_to_camera" args="0.2 0 1.20 0 45 0 base_link camera_link 100" />
+
+<!--- Laser --> 
+        <include file="$(find rocs_robot)/launch/laser_hokuyo.launch"/>
+
+
+</launch>
