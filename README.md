@@ -9,7 +9,7 @@ To run Dora you need to install this package along with packages to control the 
 To install the necessary components, create a catkin workspace and use the following .rosinstall file, or use the URLs to install how you wish.
 
 ```
-- git: {local-name: dora_laucnh, uri: 'https://github.com/uobirlab/dora_launch.git'}
+- git: {local-name: dora_launch, uri: 'https://github.com/uobirlab/dora_launch.git'}
 - git: {local-name: wu_ptu, uri: 'https://github.com/uobirlab/wu_ptu.git'}
 - git: {local-name: dora-control, uri: 'https://github.com/uobirlab/dora-control.git'}
 ```
@@ -27,7 +27,7 @@ Some of the rocs_* packages will say that they need rosaria or libaria. Ignore t
 To bring up the sensors and controllers launch
 
 ```bash
-roslaunch dora_robot dora_bringup.launch
+roslaunch dora_launch dora_bringup.launch
 ```
 
 The ports are configured to work by default on Dora. You will need to have write access to `/dev/ttyUSB0`, `/dev/ttyUSB1` and `/dev/ttyACM0` for to talk to the robot. The easiest way to do this appears to be add yourself to the `dialout` group (e.g. `sudo usermod -a -G dialout <username>`).
