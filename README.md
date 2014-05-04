@@ -30,7 +30,7 @@ To bring up the sensors and controllers launch
 roslaunch dora_launch dora_bringup.launch
 ```
 
-The ports are configured to work by default on Dora. You will need to have write access to `/dev/ttyUSB0`, `/dev/ttyUSB1` and `/dev/ttyACM0` for to talk to the robot. The easiest way to do this appears to be add yourself to the `dialout` group (e.g. `sudo usermod -a -G dialout <username>`).
+The ports are configured to work by default on Dora. You will need to have write access to `/dev/ttyUSB0`, `/dev/ttyUSB1` and `/dev/ttyACM0` for to talk to the robot. The easiest way to do this appears to be add yourself to the `dialout` group (e.g. `sudo usermod -a -G dialout <username>`). You might need to log out and log in again that the setting will take effect.
 
 ## Teleop
 
